@@ -1,0 +1,112 @@
+:root {
+  --headingFont: 'Poppins', sans-serif;
+  --paragraphFont: 'Abel', sans-serif;
+
+  --primary: #B3061A;
+  --gray: #797A7A;
+  --gray50: #e1e1e1;
+  --white: #fff;
+  --black: #000;
+}
+
+/* Globals */
+
+html {
+  box-sizing: border-box;
+
+  /* Resize all to get 1rem = 10px */
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--paragraphFont);
+  font-size: 1.6rem;
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+h1,h2,h3,h4{
+  font-family: var(--headingFont);
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+p{
+  font-family: var(--paragraphFont);
+}
+
+img {
+  max-width: 100%;
+}
+
+.icon {
+  filter: invert(100%) sepia(97%) saturate(11%) hue-rotate(192deg) brightness(104%) contrast(105%);
+  height: 2rem;
+}
+
+.button {
+  display: block;
+  font-family: var(--headingFont);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: .5rem;
+  margin-top: 2rem;
+}
+
+.button--primary {
+  background-color: var(--primary);
+}
+
+.button--secondary {
+  background-color: var(--black);
+}
+
+.icon {
+  font-size: 2.8rem;
+}
+
+.brand img{
+  width: 4rem;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.pd-0 {
+  padding: 0;
+}
+
+.d-block {
+  display: block;
+}
