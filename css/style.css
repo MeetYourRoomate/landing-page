@@ -10,18 +10,20 @@
 }
 
 /* Globals */
-
+body {
+  margin: 0;
+}
 html {
-  box-sizing: border-box;
 
   /* Resize all to get 1rem = 10px */
   font-size: 62.5%;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
   font-family: var(--paragraphFont);
   font-size: 1.6rem;
@@ -64,6 +66,10 @@ img {
 .icon {
   filter: invert(100%) sepia(97%) saturate(11%) hue-rotate(192deg) brightness(104%) contrast(105%);
   height: 2rem;
+}
+
+.icon.black {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 .button {
@@ -155,8 +161,11 @@ img {
 }
 
 .bar {
+  width: 100%;
+  min-height: 6rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation {
@@ -166,23 +175,30 @@ img {
   top: 0;
   left: 0;
   background-color: var(--black);
-  padding: 1rem 0;
   text-align: center;
-
-  transition: all ease .8s;
+  transition: margin .8s ease;
   margin-top: -300%;
 }
 
-.nav-bar {
-  padding: 1rem 0;
-}
+
 .navigation .nav_link{
-  font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  /* font-weight: bold; */
   display: block;
   padding: 1rem 0;
   color: var(--white);
   text-align: center;
+  letter-spacing: .17rem;
+  transition: all .3s ease;
+}
+
+.navigation .nav_link:first-child {
+  margin-top: 1rem;
+}
+
+.navigation img {
+  margin: 1rem 0;
 }
 
 .navigation .nav_link:hover {
@@ -195,31 +211,35 @@ img {
   .header {
     padding-top: 0;
   }
+
+  .bar {
+    border-bottom: .05rem solid rgba(255, 255, 255, 0.274);
+
+  }
+
   .navigation {
-    position: inherit;
+    width: auto;
+    position: static;
+    display: flex;
+    align-items: center;
     transition: none;
     margin-top: 0!important;
     background-color: transparent;
   }
 
-  .bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: .05rem solid rgba(255, 255, 255, 0.274);
-  }
-
-
   .navigation .nav_link{
-    padding: 0;
     display: inline-block;
     padding: 0 1rem;
-    transition: color .3s ease;
+    transition: all .3s ease;
   }
 
+  .navigation .nav_link:first-child {
+    margin-top: 0;
+  }
+  
+
   .navigation .nav_link:hover {
-    font-weight: bold;
-    color: var(--primary);
+    font-size: 1.9rem;
     background-color: transparent;
   }
 
