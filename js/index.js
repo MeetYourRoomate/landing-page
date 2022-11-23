@@ -11,5 +11,5 @@ $("#btn_close_menu").click(() => {
   navigation.css('marginTop', '-100%')
   setTimeout(() => {
     navigation.css('marginTop', '-300%')
-  },1000)
+  },500)
 })
