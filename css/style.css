@@ -618,3 +618,14 @@ footer .social_icons {
   width: min(90%, 120rem);
   margin: 3rem auto;
 }
+
+.about__product{
+  width: 100%;
+}
+
+.about__product iframe{
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
