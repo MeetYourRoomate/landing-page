@@ -612,3 +612,9 @@ footer .social_icons {
   gap: 2rem;
   margin: 1rem 0;
 }
+
+
+#terms {
+  width: min(90%, 120rem);
+  margin: 3rem auto;
+}
